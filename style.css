@@ -5,10 +5,10 @@ input { display: block; width: 100%; height: 43px; padding: 10px 1em 10px 7rem; 
 input:focus { border-color: #66afe9; outline: 0; color: #66afe9; }
 h1 { font-size: 150%; margin-top: 0; }
 
-.result { background: #F3F3F3; padding: 0 ; margin: 0; }
-.result li { position: relative; padding: 0 .2rem 0 7rem; line-height: 2.4rem; list-style: none; }
-.result li:nth-child(odd) { background: #f9f9f9; }
-.result li:before { content: attr(class) ; width: 7rem; position: absolute; left: 0; top: 50%; bottom: 0; font-size: 1rem; height: 1rem; line-height: 1rem; text-align: center;
+.results { background: #F3F3F3; padding: 0 ; margin: 0; }
+.results li { position: relative; padding: 0 .2rem 0 7rem; line-height: 2.4rem; list-style: none; }
+.results li:nth-child(odd) { background: #f9f9f9; }
+.results li:before { content: attr(class) ; width: 7rem; position: absolute; left: 0; top: 50%; bottom: 0; font-size: 1rem; height: 1rem; line-height: 1rem; text-align: center;
 	margin-top: -.5rem; color: #999; text-transform: uppercase; }
 
 .try { padding-left: 0;  }
@@ -17,7 +17,7 @@ h1 { font-size: 150%; margin-top: 0; }
 .try dd { color: #667 ; background-color: #F6F6F6 ; float: left; margin: 0 .4rem .4rem 0 ; }
 .try dd a { display: block; height: 100%; padding: .2em .6em; text-decoration: none;}
 
-.result { font-size: 20px; }
+.equals { font-size: 20px; }
 .type { font-size: 18px; }
 .binary { font-size: 12px; }
 
