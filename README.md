@@ -10,8 +10,8 @@ This page is totally made for webkit/firefox.
 
 In addition:
 
-- It doesn't support IE
-- Denormalized number equals zero in chrome for iOS
+- It doesn't support IE fully, nor even so-called modern IE. When calling "Number(xxx).toString(2)" for some value., IE 11 returns value in a hybrid form of exponential AND binary, instead of pure binary value.
+- Denormalized number equals zero in chrome for iOS. Dunno y.
 
 ## ref
 
