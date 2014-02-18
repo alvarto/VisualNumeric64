@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Expression2memoryModel</title>
+	<script type="text/javascript" src="jquery-1.10.1.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Enter an Expression：</h1>
+	<input type="text" id="text">
+	<ul id="result" class="result">
+	</ul>
+	<div class="try">
+		<h2>Try them out:</h2>
+		<dl>
+			<dt>Extreme Numbers</dt>
+			<dd>
+				<a href="#0">0</a>
+			</dd>
+			<dd>
+				<a href="#NaN">NaN</a>
+			</dd>
+			<dd>
+				<a href="#1/0">1/0</a>
+			</dd>
+			<dd>
+				<a href="#1/-0">1/-0</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt>Big Numbers</dt>
+			<dd>
+				<a href="#Number.MAX_VALUE">Number.MAX_VALUE</a>
+			</dd>
+			<dd>
+				<a href="#Math.pow(2,53)-1">Math.pow(2,53)-1</a>
+			</dd>
+			<dd>
+				<a href="#Math.pow(2,53)">Math.pow(2,53)</a>
+			</dd>
+			<dd>
+				<a href="#Math.pow(2,53)+1">Math.pow(2,53)+1</a>
+			</dd>
+			<dd>
+				<a href="#Math.pow(2,53)+2">Math.pow(2,53)+2</a>
+			</dd>
+		</dl>
+		<dl>
+			<dt>Small Numbers</dt>
+			<dd>
+				<a href="#Math.pow(2,-4)">Math.pow(2,-4)</a>
+			</dd>
+			<dd>
+				<a href="#Math.pow(2,-1022)">Math.pow(2,-1022)</a>
+			</dd>
+			<dd>
+				<a href="#Math.pow(2,-1023)">Math.pow(2,-1023)</a>
+			</dd>
+			<dd>
+				<a href="#Math.pow(2,-1024)">Math.pow(2,-1024)</a>
+			</dd>
+			<dd>
+				<a href="#Number.MIN_VALUE">Number.MIN_VALUE</a>
+			</dd>
+		</dl>
+	</div>
+	<p>
+		* <i>Only made for webkit and Firefox.</i>
+	</p>
+	<h2>Reference</h2>
+	<ul>
+		<li>
+			<a href="http://en.wikipedia.org/wiki/IEEE_754" target="_blank">IEEE 754</a>
+		</li>
+		<li>
+			<a href="http://www.2ality.com/2012/04/number-encoding.html" target="_blank">"How numbers are encoded in JavaScript"</a>
+		</li>
+	</ul>
+	<script type="text/html" id="template">
+		<li class="result">$result$</li>
+		<li class="type">$type$</li>
+		<li class="memory">
+			<span class="prefix">$mP$</span><span class="significant">$mX$</span><span class="exponent">$mY$</span><span class="plusminus">$mZ$</span>
+		</li>
+		<li class="binary">$binary$</li>
+		<li class="math" $mathHide$>
+			<span class="plusminus">
+				<span>(-1)</span><sup>$Z$</sup>
+			</span>
+			·
+			<span class="exponent">
+				<span>2</span><sup>-1023+$Y$</sup>
+			</span>
+			·
+			<span class="prefix">$mP$</span><span class="significant">$X$</span><sub>2</sub>
+        </li>
+	</script>
+</body>
+</html>
