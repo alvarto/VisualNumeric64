@@ -1,3 +1,5 @@
+<http://alvarto.github.io/VisualNumeric64/#Math.pow(2,-1022)>
+
 ## what's this
 
 A intuitively vision of the memory model of how numbers are stored in JavaScript. Should apply to any other similar language which follows [IEEE 754](http://en.wikipedia.org/wiki/IEEE_754) to store numeric things in the form of 64bits floating-point number.
