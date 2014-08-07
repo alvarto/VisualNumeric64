@@ -9,7 +9,7 @@ $(window).load(function(){
 
 	var TYPE = {
 		regs : {
-			Normalized : /^-?1\.?[01]*$/ ,
+			Normalized : /^-?[01]\.?[01]*$/ ,
 			MaybeDenormalized : /^-?0\.[01]*1$/ ,
 			NotANumber : /^NaN$/ ,
 			Infinities :/^-?Infinity$/ ,
