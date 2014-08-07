@@ -17,7 +17,7 @@ h1 { font-size: 150%; margin-top: 0; }
 .try dd { color: #667 ; background-color: #F6F6F6 ; float: left; margin: 0 .4rem .4rem 0 ; }
 .try dd a { display: block; height: 100%; padding: .2em .6em; text-decoration: none;}
 
-.equals { font-size: 20px; }
+.approximate { font-size: 20px; }
 .type { font-size: 18px; }
 .binary { font-size: 12px; }
 
