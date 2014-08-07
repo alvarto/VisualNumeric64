@@ -15,10 +15,15 @@ $(window).load(function(){
 			Infinities :/^-?Infinity$/ ,
 			Zero : /^0$/ ,
 		} ,
+		order : [
+			"Infinities", "NotANumber" , "Zero", "MaybeDenormalized" , "Normalized"
+		] ,
 		getType : function (str) {
-			for ( var i in this.regs ) {
-				if ( this.regs[i].test(str) ) {
-					return i ;
+			for ( var i = 0 ; i < this.order.length ; i++ ) {
+			// for ( var i in this.regs ) {
+				var j = this.order[i] ;
+				if ( this.regs[j].test(str) ) {
+					return j ;
 				}
 			}
 			return "Unexpected Value" ;
